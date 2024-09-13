@@ -12,6 +12,8 @@ pip install flexarray
 
 ## Usage
 
+`Implementing Array with flexarray`
+
 ```py
 from flexarray.array import Array
 
@@ -37,4 +39,49 @@ print(arr)  # Array([None, None, None, None, None, None, None, None, None, None]
 arr.free()
 print(arr)  # Array([])
 
+```
+`Using Mathematics and Sorting on FlexArray`
+
+```py
+from flexarray.array import Array
+from flexarray.mathematics import (
+    SumOfElements, AverageOfElements, MaxElement, MinElement, 
+    ProductOfElements, MedianOfElements, ModeOfElements
+)
+from flexarray.sorting import BubbleSort, SelectionSort, InsertionSort
+
+# Step 1: Create a FlexArray with initial elements
+arr = Array(6)
+arr[0] = 10
+arr[1] = 20
+arr[2] = 30
+arr[3] = 40
+arr[4] = 50
+arr[5] = 60
+
+# Step 2: Perform mathematical operations
+print("Sum of elements:", SumOfElements(arr))  # Output: 210
+print("Average of elements:", AverageOfElements(arr))  # Output: 35.0
+print("Maximum element:", MaxElement(arr))  # Output: 60
+print("Minimum element:", MinElement(arr))  # Output: 10
+print("Product of elements:", ProductOfElements(arr))  # Output: 720000000
+print("Median of elements:", MedianOfElements(arr))  # Output: 35.0
+print("Mode of elements:", ModeOfElements(arr))  # Output: None (since no repeating elements)
+
+# Step 3: Sorting FlexArray using different algorithms
+# Bubble Sort
+BubbleSort(arr)
+print("Array after Bubble Sort:", arr)
+
+# Selection Sort
+arr.realloc(6)  # Reset array for demonstration
+arr[0], arr[1], arr[2], arr[3], arr[4], arr[5] = 50, 40, 30, 20, 10, 60  # Unsorted
+SelectionSort(arr)
+print("Array after Selection Sort:", arr)
+
+# Insertion Sort
+arr.realloc(6)  # Reset array again
+arr[0], arr[1], arr[2], arr[3], arr[4], arr[5] = 60, 50, 40, 30, 20, 10  # Unsorted
+InsertionSort(arr)
+print("Array after Insertion Sort:", arr)
 ```
