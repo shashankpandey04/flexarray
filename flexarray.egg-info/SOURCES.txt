@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+flexarray/__init__.py
+flexarray/array.py
+flexarray/mathematics.py
+flexarray/searching.py
+flexarray/sorting.py
+flexarray.egg-info/PKG-INFO
+flexarray.egg-info/SOURCES.txt
+flexarray.egg-info/dependency_links.txt
+flexarray.egg-info/top_level.txt
+tests/test_flexarray.py
